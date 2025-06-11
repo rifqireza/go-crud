@@ -1,1 +1,49 @@
+Alur Kerja Piranti Interaktif Game
+1. Input
+Input adalah semua tindakan pemain yang ditangkap oleh perangkat input, seperti mouse, keyboard, touchscreen, mikrofon, atau sensor gerakan.
+•	Mouse dan keyboard umum digunakan dalam game FPS seperti Valorant untuk navigasi dan bidikan presisi. [1]
+•	Touchscreen untuk gaming berpotensi untuk dapat menggantikan konsol. [2]
+•	Perangkat seperti mikrofon memudahkan pemain dalam berkomunikasi melalui voice chat. [3]
+•	Sensor gerakan memungkinkan headset untuk melacak pergerakan kepala dan tubuh pengguna. [4]
+Alur input: pemain memberikan perintah fisik, perangkat input mengubahnya menjadi sinyal listrik, sinyal diproses oleh driver dan OS, dan akhirnya diteruskan ke Game Engine untuk diproses lebih lanjut.
+
+2. Proses
+Game berjalan melalui proses utama bernama Game Loop yang mencakup tahapan: Mendapat input dari user, memproses logika dan mengubah bagian pada game, setelah itu melakukan rendering. [5]
+•	CPU yang bertugas memproses logika pada sebuah permainan, dan menangani input dari pemain.  [6]
+•	Untuk game online, input pemain dikirim ke server dan disinkronkan dengan pemain lain menggunakan State Synchronization Techniques. [7]
+•	Rendering dilakukan oleh GPU yang menerima draw calls dari CPU, melalui API grafis seperti DirectX, OpenGL, atau Vulkan. [8] GPU kemudian memproses vertex dan fragment untuk membentuk visual akhir dalam game.
+3. Output
+Output adalah hasil proses game yang ditampilkan ke pemain dalam bentuk visual, audio, dan getaran (haptic).
+•	Visual output dikirim dari GPU ke frame buffer, untuk selanjutnya ditampilkan ke monitor. [9]
+•	Audio diproses melalui sound engine yang menghasilkan efek suara dan posisi 3D audio. [10]
+•	Haptic feedback diberikan lewat getaran di controller atau ponsel dari mengubah audio menjadi vibration, untuk memberikan pengalaman sentuhan kepada pemain. [11]
+4. Contoh Alur (Valorant)
+Contoh nyata dalam game FPS seperti Valorant:
+1. Pemain klik mouse → sinyal ditangkap OS.
+2. Proses input dan menampilkan efek menembak.
+3. Mengirim input ke server.
+4. Server menerima input dan mengulang simulasi dan tembakan.
+5. Mengirim hasil ke client.
+6. Menerima hasil tembakan.
+7. Menampilkan dampak dari tembakan.
+Seluruh siklus ini berjalan dalam 80ms untuk menjaga 60 FPS. [12]
+5. Kesimpulan
+Alur kerja game interaktif terdiri dari tiga tahap utama:
+- Input: menangkap aksi pemain melalui perangkat input.
+- Proses: mengubah input menjadi aksi dalam game melalui CPU dan GPU.
+- Output: menampilkan hasil secara visual, audio, dan sentuhan.
+Setiap tahap melibatkan perangkat keras dan perangkat lunak yang kompleks dan bekerja dalam hitungan milidetik.
+
+1. Keyboard and mouse vs controller: What’s better for playing games?
+2. Touch and Play? Investigating the value of touchscreen for gaming experience
+3. Efektifitas voice chat sebagai media komunikasi dalam game pubg mobile
+4. Bagaimana Cara Kerja Virtual Reality dalam Gaming?
+5. What should a main game loop do?
+6. Why is a CPU Important for Gaming? Complete Guide
+7. State Synchronization Techniques For Real-time Multiplayer Interactions
+8. Understanding Graphics APIs
+9. What is a Frame Buffer? (Understanding Graphics Memory)
+10. Luxe engine – tutorial audio
+11. Impact of an audio-haptic strap to augment immersion in VR video gaming: a pilot study
+12. The state of hit registration – playvalorant.com
 
